@@ -24,6 +24,49 @@
 	align-items: center;
 }
 
+.title-div {
+	flex-direction: column;
+	row-gap: 20px;
+	padding: 70px 0px;
+}
+
+.title-div h1 {
+	font-weight: 400;
+	margin: 0px;
+	text-transform: uppercase;
+	font-size: 2.5rem;
+}
+
+.title-div span hr {
+	width: 100px;
+	border: 1px solid #000;
+}
+
+.title-div span {
+	position: relative;
+}
+
+.title-div span::after {
+	content: "";
+	display: block;
+	position: absolute;
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 2px solid #000;
+	left: 50%;
+	top: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.title-div p {
+	color: var(--gray);
+	max-width: 600px;
+	text-align: center;
+	line-height: 2;
+}
+
 /* End Global Rules */
 
 /*Start Main Page*/
@@ -33,7 +76,7 @@ body {
 
 main {
 	height: 100vh;
-	width: 100vw;
+	width: 100%;
 	position: relative;
 	background-size: cover;
 }
@@ -47,6 +90,7 @@ main .background-img {
 	left: 0px;
 	filter: brightness(35%);
 	z-index: -1;
+	overflow: hidden;
 }
 
 main header .container {
@@ -157,6 +201,39 @@ section.slider .active-slider span:nth-child(2) {
 }
 /*End Main Page*/
 
+/*Start Services Section */
+section.services {
+	width: 100%;
+	background-color: #fff;
+}
+
+section.services .services-content {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	grid-gap: 40px;
+}
+
+section.services .services-content .service {
+	align-items: flex-start;
+	justify-content: space-between;
+	column-gap: 40px;
+	row-gap: 30px;
+}
+
+section.services .services-content .service h2 {
+	margin: 0px;
+	color: var(--cyan);
+	font-size: 1.2rem;
+	margin-bottom: 30px;
+}
+
+section.services .services-content .service p {
+	line-height: 2;
+	color: var(--gray);
+}
+
+/*End Services Section*/
+
 /*Start Media Queries*/
 @media (max-width: 800px) {
 	nav .menu-icon {
@@ -194,6 +271,18 @@ section.slider .active-slider span:nth-child(2) {
 	}
 	section.slider > span {
 		display: none;
-	} 
+	}
+	section.services .services-content {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 30px;
+	}
+	section.services .services-content .service {
+		flex-direction: column;
+		justify-content: flex-start;
+		align-items: center;
+		text-align: center;
+	}
 }
 
