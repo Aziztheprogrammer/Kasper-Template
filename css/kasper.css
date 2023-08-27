@@ -284,6 +284,126 @@ section.services .content span {
 	column-gap: 20px;
 }
 /*End Services Section*/
+/*Start Of Portfolio Section*/
+section.portfolio {
+	width: 100%;
+	background-color: #fff;
+}
+
+section.portfolio .projects-div .filter {
+	column-gap: 10px;
+	row-gap: 20px;
+	flex-wrap: wrap;
+	margin: 0px 20px; 
+}
+
+section.portfolio .projects-div .filter span {
+	padding: 10px;
+	cursor: pointer;
+}
+
+section.portfolio .projects-div .filter span:nth-child(1) {
+	background-color: var(--cyan);
+	color: #fff;
+}
+
+section.portfolio .projects-div {
+	flex-direction: column;
+	row-gap: 40px;
+	justify-content: flex-start;
+}
+
+section.portfolio .projects-div .projects {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+	width: 100%;
+}
+
+section.portfolio .projects-div .projects .project {
+	position: relative;
+	overflow: hidden;
+}
+
+section.portfolio .projects-div .projects .project:hover > img {
+	transform: rotate(5deg) scale(1.2);
+}
+
+section.portfolio .projects-div .projects .project img {
+	transition: 0.7s all ease;
+	width: 100%;
+	height: auto;
+}
+
+section.portfolio .projects-div .projects .project .project-info {
+	background-color: #fff;
+	display: block;
+	width: 100%;
+	padding: 10px 0px 10px 20px;
+	line-height: 1.7;
+	position: absolute;
+	bottom: 0px;
+	transform: translateY(100%);
+	transition: 0.4s all ease;
+}
+
+section.portfolio .projects-div .projects .project:hover > .project-info {
+	transform: translateY(0%);
+}
+
+section.portfolio .projects-div .projects .project .project-info h3 {
+	margin: 0px;
+	font-weight: 400;
+	font-size: 1rem;
+}
+
+section.portfolio .projects-div .projects .project .project-info span {
+	color: var(--cyan);
+}
+
+section.portfolio .projects-div button {
+	background-color: var(--cyan);
+	padding: 10px 20px;
+	color: #fff;
+	border: none;
+	min-width: 70px;
+	cursor: pointer;
+}
+
+section.portfolio .video-section {
+	margin-top: 10vh;
+	position: relative;
+}
+
+section.portfolio .video-section video {
+	filter: brightness(70%);
+}
+
+section.portfolio .video-section .video-content {
+	background-color: var(--transparent-blue);
+	width: 100%;
+	flex-direction: column;
+	row-gap: 30px;
+	padding: 50px 0px;
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	color: #fff;
+}
+
+section.portfolio .video-section .video-content h2 {
+	margin: 0px;
+	font-weight: 400;
+}
+
+section.portfolio .video-section .video-content button {
+	background-color: #000;
+	padding: 10px 20px;
+	color: #fff;
+	border: none;
+	min-width: 70px;
+	cursor: pointer; 
+}
+/*End Of Portfolio Section*/
 
 /*Start Media Queries*/
 @media (max-width: 800px) {
