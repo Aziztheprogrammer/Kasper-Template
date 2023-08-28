@@ -381,13 +381,15 @@ section.portfolio .video-section video {
 section.portfolio .video-section .video-content {
 	background-color: var(--transparent-blue);
 	width: 100%;
-	flex-direction: column;
-	row-gap: 30px;
-	padding: 50px 0px;
-	position: absolute;
-	top: 50%;
-	transform: translateY(-50%);
-	color: #fff;
+    max-height: 100%;
+    flex-direction: column;
+    row-gap: 30px;
+    padding: 50px 20px;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    color: #fff;
+    text-align: center;
 }
 
 section.portfolio .video-section .video-content h2 {
@@ -404,6 +406,203 @@ section.portfolio .video-section .video-content button {
 	cursor: pointer; 
 }
 /*End Of Portfolio Section*/
+/*Start Of About Us Section*/
+section.about-us {
+	background-color: #fff;
+	width: 100%;
+	padding: 70px 0px;
+}
+
+section.about-us div.stats {
+	padding: 80px 0px;
+	width: 100%;
+	background: url("../images/stats.webp") no-repeat top center;
+	background-size: cover;
+}
+
+section.about-us div.stats .stats-content {
+	flex-wrap: wrap;
+	justify-content: space-around;
+	background-color: var(--transparent-blue);
+	width: 80%;
+}
+
+section.about-us div.stats .stats-content .box {
+	flex-direction: column;
+	row-gap: 20px;
+	padding: 40px;
+	color: #fff;
+}
+
+section.about-us div.stats .stats-content .box i {
+	font-size: 1rem;
+	padding: 15px;
+	background-color: #000;
+	border-radius: 50%;
+}
+
+section.about-us div.stats .stats-content .box span {
+	font-weight: 700;
+	font-size: 2.5rem;
+}
+
+section.about-us div.stats .stats-content .box p {
+	font-size: 0.9rem;
+	margin: 0px;
+	text-align: center;
+}
+
+section.about-us .testimonials-skills {
+	width: 100%;
+	margin-top: 70px;
+}
+
+section.about-us .testimonials-skills .container {
+	display: grid;
+	grid-gap: 10%;
+	grid-template-columns: repeat(auto-fit, minmax(400px, 1fr));
+	align-items: flex-start;
+}
+
+section.about-us .testimonials-skills .container > div {
+	flex-direction: column;
+	text-align: center;
+}
+
+section.about-us .testimonials-skills .container > div h3 {
+	font-weight: 400;
+	text-transform: uppercase;
+}
+
+section.about-us .testimonials-skills .container > div p {
+	color: var(--gray);
+	line-height: 2;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews {
+	flex-direction: column;
+	row-gap: 50px;
+	align-self: flex-start;
+	padding: 20px 0px;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews > div.user {
+	column-gap: 40px;
+	position: relative;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews > div.user img {
+	max-width: 100px;
+	border-radius: 50%;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews > div.user p {
+	text-align: left;
+	padding-bottom: 40px;
+	border-bottom: #ddd 1px solid;
+	color: #000;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews > div.user span {
+	position: absolute;
+	color: var(--gray);
+	right: 0px;
+	bottom: 30px;
+	font-size: 0.9rem;
+}
+
+section.about-us .testimonials-skills .testimonials .reviews .active-review span {
+	width: 15px;
+	height: 15px;
+	border-radius: 50%;
+	background-color: #fff;
+	border: 1px solid var(--gray);
+}
+
+section.about-us .testimonials-skills .testimonials .reviews .active-review span:nth-child(2) {
+	background-color: var(--cyan);
+	border: none;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats {
+	flex-direction: column;
+	row-gap: 30px;
+	align-self: flex-start;
+	padding: 20px 0px;
+	width: 100%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div {
+	text-align: left;
+	width: 100%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div .level {
+	width: 100%;
+	height: 40px;
+	background-color: #ddd;
+	margin: 10px 0px 20px 0px;
+	position: relative;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div .level::after {
+	content: "";
+	height: 100%;
+	position: absolute;
+	left: 0px;
+	top: 0px;
+	background-color: var(--cyan);
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.adobe .level::after {
+	width: 90%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.html-css .level::after {
+	width: 85%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.javascript .level::after {
+	width: 80%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.php .level::after {
+	width: 90%;
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div .level .percentage {
+	background-color: #000;
+	color: #fff;
+	padding: 5px;
+	border-radius: 4px;
+	position: absolute;
+	top: -20px;
+	transform: translateY(-100%);
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.adobe .level .percentage {
+	left: 90%;
+	transform: translate(-50%, -100%);
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.html-css .level .percentage {
+	left: 85%;
+	transform: translate(-50%, -100%);
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.javascript .level .percentage {
+	left: 80%;
+	transform: translate(-50%, -100%);
+}
+
+section.about-us .testimonials-skills .skills .skills-stats > div.php .level .percentage {
+	left: 90%;
+	transform: translate(-50%, -100%);
+}
+/*End Of About Us Section*/
+
+
+
 
 /*Start Media Queries*/
 @media (max-width: 800px) {
@@ -463,6 +662,18 @@ section.portfolio .video-section .video-content button {
 	}
 	section.services .content h2 {
 		font-size: 1.2rem;
+	}
+	section.about-us .testimonials-skills .container {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		row-gap: 50px;
+	}
+	section.about-us .testimonials-skills .testimonials .reviews > div.user {
+		flex-direction: column;
+	}
+	section.about-us .testimonials-skills .testimonials .reviews > div.user p {
+		text-align: center;
 	}
 }
 
