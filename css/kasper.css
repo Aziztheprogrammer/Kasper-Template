@@ -415,9 +415,27 @@ section.about-us {
 
 section.about-us div.stats {
 	padding: 80px 0px;
+	margin-top: 150px;
 	width: 100%;
 	background: url("../images/stats.webp") no-repeat top center;
 	background-size: cover;
+	position: relative;
+	z-index: 200;
+}
+
+section.about-us .container {
+	position: relative;
+}
+
+section.about-us .container img.about-img {
+	position: absolute;
+	bottom: 0px;
+	left: 50%;
+	transform: translate(-50%, 100%);
+	z-index: 100;
+	min-width: 300px;
+	max-width: 80%;
+	height: auto;
 }
 
 section.about-us div.stats .stats-content {
@@ -599,8 +617,151 @@ section.about-us .testimonials-skills .skills .skills-stats > div.php .level .pe
 	left: 90%;
 	transform: translate(-50%, -100%);
 }
-/*End Of About Us Section*/
 
+section.about-us .about-us-img {
+	width: 100%;
+	min-height: 200px;
+	position: relative;
+	overflow: hidden;
+	margin-top: 80px;
+}
+
+section.about-us .about-us-img img {
+	height: 100%;
+	width: 100%;
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	filter: brightness(35%);
+}
+
+section.about-us .about-us-img .text {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+	color: #fff;
+	text-align: center;
+}
+
+section.about-us .about-us-img .text p {
+	font-size: 1.5rem;
+	line-height: 2;
+}
+/*End Of About Us Section*/
+/*Start Of Pricing Section*/
+section.pricing .plans .container {
+	display: grid;
+	grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+	grid-gap: 20px;
+}
+
+section.pricing .plans .container .plan {
+	text-align: center;
+	background-color: #fcfcfc;
+}
+
+section.pricing .plans .container .plan .plan-type {
+	padding: 30px;
+	border-top: var(--cyan) 1px solid;
+	text-align: center;
+}
+
+section.pricing .plans .container .plan .plan-type h4 {
+	font-weight: 400;
+	margin: 0px;
+	font-size: 1.2rem;
+	margin: 20px 0px;
+}
+
+section.pricing .plans .container .plan .plan-type p {
+	font-size: 3.5rem;
+	font-weight: 700;
+	margin: 20px auto;
+	position: relative;
+	width: fit-content;
+}
+
+section.pricing .plans .container .plan .plan-type p::after {
+	content: "$";
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	transform: translateX(-120%);
+	color: #000;
+	font-size: 2rem;
+	font-weight: 400;
+}
+
+section.pricing .plans .container .plan .plan-type p::before {
+	content: "/MO";
+	position: absolute;
+	bottom: 10px;
+	right: 0px;
+	transform: translateX(120%);
+	color: #000;
+	font-size: 1rem;
+	font-weight: 700;
+}
+
+section.pricing .plans .container .plan .features {
+	padding: 0px 60px;
+	border-top: 1px var(--cyan) solid;
+	border-bottom: 1px var(--cyan) solid;
+}
+
+section.pricing .plans .container .plan .features span {
+	display: block;
+	padding: 20px 0px;
+	border-bottom: 1px solid var(--cyan);
+}
+
+section.pricing .plans .container .plan .features span:last-child {
+	border-bottom: none;
+}
+
+section.pricing .plans .container .plan button {
+	padding: 25px;
+	border: 1px var(--cyan) solid;
+	color: purple;
+	background-color: transparent;
+	margin: 30px auto;
+	cursor: pointer;
+	transition: 0.7s ease all;
+}
+
+section.pricing .plans .container .plan button:hover {
+	color: #fcfcfc;
+	background-color: var(--cyan);
+}
+
+section.pricing .contact-us {
+	margin: 35px auto;
+	width: fit-content;
+	text-align: center;
+}
+
+section.pricing .contact-us p {
+	font-size: 1.2rem;
+	line-height: 2;
+}
+
+section.pricing .contact-us button {
+	margin: 10px auto;
+	padding: 15px 25px;
+	color: #fcfcfc;
+	background-color: var(--cyan);
+	cursor: pointer;
+	transition: 0.7s ease all;
+	border: none;
+}
+
+section.pricing .contact-us button:hover {
+	color: var(--cyan);
+	background-color: #fcfcfc;
+	border: 1px var(--cyan) solid;
+}
+/*End Of Pricing Section*/
 
 
 
@@ -674,6 +835,9 @@ section.about-us .testimonials-skills .skills .skills-stats > div.php .level .pe
 	}
 	section.about-us .testimonials-skills .testimonials .reviews > div.user p {
 		text-align: center;
+	}
+	section.about-us .about-us-img .text p {
+		font-size: 1rem;
 	}
 }
 
