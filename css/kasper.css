@@ -35,6 +35,7 @@
 	margin: 0px;
 	text-transform: uppercase;
 	font-size: 2.5rem;
+	text-align: center;
 }
 
 .title-div span hr {
@@ -667,7 +668,7 @@ section.pricing .plans .container .plan .plan-type {
 	text-align: center;
 }
 
-section.pricing .plans .container .plan .plan-type h4 {
+section.pricing .plans .container .plan .plan-type h3 {
 	font-weight: 400;
 	margin: 0px;
 	font-size: 1.2rem;
@@ -761,8 +762,162 @@ section.pricing .contact-us button:hover {
 	background-color: #fcfcfc;
 	border: 1px var(--cyan) solid;
 }
-/*End Of Pricing Section*/
 
+section.pricing .contact-div {
+	background: url("../images/subscribe.webp") no-repeat top center;
+	background-size: cover;
+	min-height: 200px;
+	padding: 30px 0px;
+	color: #fff;
+	margin: 60px 0px;
+}
+
+section.pricing .contact-div .container {
+	flex-wrap: wrap;
+	column-gap: 40px;
+	row-gap: 20px;
+}
+
+section.pricing .contact-div .container form {
+	border: 1px solid #fff;
+	display: flex;
+	flex-wrap: nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+
+section.pricing .contact-div .container form i {
+	padding: 10px;
+}
+
+section.pricing .contact-div .container form input[type="email"] {
+	padding: 20px 10px;
+	background-color: transparent;
+	border: none;
+	min-width: 50px;
+	max-width: 250px;
+}
+
+section.pricing .contact-div .container form input[type="email"]::placeholder {
+	color: #fff;
+}
+
+section.pricing .contact-div .container form input[type="submit"] {
+	background-color: var(--cyan);
+	color: #fcfcfc;
+	padding: 20px 10px;
+	border: none;
+}
+
+section.pricing .contact-div .container p {
+	text-align: center;
+	line-height: 2;
+}
+/*End Of Pricing Section*/
+/*Start Of Contact Us Section*/
+section.contact-us .contact-info {
+	width: 100%;
+}
+
+section.contact-us .contact-info .container {
+	column-gap: 70px;
+	row-gap: 40px;
+	flex-wrap: wrap;
+	align-items: flex-start;
+}
+
+section.contact-us .contact-info form {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 20px;
+	flex-grow: 2.5;
+}
+
+section.contact-us .contact-info form input {
+	width: 100%;
+	min-height: 50px;
+	border: 1px solid var(--gray);
+	padding: 20px 10px;
+	color: var(--gray);
+}
+
+section.contact-us .contact-info form input[type="submit"] {
+	background-color: var(--cyan);
+	padding: 10px 20px;
+	align-self: flex-end;
+	color: #fcfcfc;
+	border: none;
+	width: fit-content;
+}
+
+section.contact-us .contact-info form textarea {
+	width: 100%;
+	min-height: 300px;
+	border: 1px solid var(--gray);
+	padding: 20px 10px;
+	color: var(--gray);
+}
+
+section.contact-us .contact-info .info {
+	flex-direction: column;
+	align-items: flex-start;
+	justify-content: flex-start;
+	row-gap: 50px;
+	display: inline-block;
+}
+
+section.contact-us .contact-info .info h4 {
+	margin: 0px 0px 20px 0px;
+	font-weight: 400;
+	font-size: 1.2rem;
+}
+
+section.contact-us .contact-info .info span {
+	color: var(--gray);
+	display: block;
+	line-height: 2;
+}
+
+section.contact-us .contact-info .info .phone {
+	margin-bottom: 40px;
+}
+/*End Of Contact Us Section*/
+/*Start Of Footer Section*/
+footer {
+	background: url("../images/subscribe.webp") no-repeat top center;
+	background-size: cover;
+	flex-direction: column;
+	width: 100%;
+	padding: 50px 0px;
+	row-gap: 20px;
+	margin-top: 70px;
+	position: relative;
+}
+
+footer .social {
+	flex-direction: column;
+	row-gap: 10px;
+	color: #fcfcfc;
+	padding: 20px;
+	min-width: 200px;
+}
+
+footer .social hr {
+	width: 100%;
+	background-color: #fff;
+	border: none;
+	height: 2px;
+}
+
+footer .social .social-icons {
+	column-gap: 20px;
+}
+
+footer > span {
+	color: #fff;
+}
+/*End Of Footer Section*/
 
 
 /*Start Media Queries*/
@@ -838,6 +993,22 @@ section.pricing .contact-us button:hover {
 	}
 	section.about-us .about-us-img .text p {
 		font-size: 1rem;
+	}
+	section.pricing .contact-div .container form {
+		width: 100%;
+	}
+	section.contact-us .contact-info .info {
+		display: inline-block;
+		order: 1;
+		flex-direction: column;
+		width: 100%;
+		text-align: center;
+	}
+	section.contact-us .contact-info .info .phone {
+		text-align: center;
+	}
+	section.contact-us .contact-info form {
+		order: 2;
 	}
 }
 
